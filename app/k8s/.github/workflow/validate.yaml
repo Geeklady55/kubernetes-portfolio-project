@@ -1,0 +1,23 @@
+name: Validate Kubernetes YAML
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show files
+        run: ls -R
+
+      - name: Validate YAML exists
+        run: |
+          test -f k8s/deployment.yaml
+          test -f k8s/service.yaml
+          test -f k8s/kind-config.yaml
