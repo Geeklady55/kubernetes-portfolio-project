@@ -30,3 +30,19 @@ kubectl apply -f k8s/service.yaml
 
 ### 5. Access app
 kubectl port-forward service/my-nginx-service 8080:80
+
+
+---
+
+## 6. Add links in your README
+
+Open `README.md` and add this section:
+
+```md
+## Supporting Documentation
+
+- [Architecture Diagram](docs/architecture-diagram.md)
+- [Troubleshooting Guide](troubleshooting/troubleshooting-guide.md)
+- [Incident Example](docs/incident-example.md)
+- [Scaling Example](docs/scaling-example.md)
+- [Failure Simulation](docs/failure-simulation.md)
